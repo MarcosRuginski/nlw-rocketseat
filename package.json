@@ -4,7 +4,7 @@
   "description": "01/06/2020 até 05/06/2020",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/MarcosRuginski/nlw-rocketseat/issues"
   },
-  "homepage": "https://github.com/MarcosRuginski/nlw-rocketseat#readme"
+  "homepage": "https://github.com/MarcosRuginski/nlw-rocketseat#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
