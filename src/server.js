@@ -1,6 +1,9 @@
 const express = require("express");
 const server = express();
 
+// Pega o banco de dados
+const db = require("./database/db");
+
 // configurar pasta publica
 server.use(express.static("public"));
 
@@ -22,7 +25,16 @@ server.get("/create-point", (req, res) => {
 })
 
 server.get("/search", (req, res) => {
-  return res.render("search-results.html");
+  // Pegar os dados do banco
+  db.all(`SELECT * FROM places`, function(err, rows){
+    if(err) {
+      return console.log(err);
+    }
+
+    const total = rows.length;
+
+    return res.render("search-results.html", { places: rows, total });
+  })
 })
 
 // ligar o servidor
