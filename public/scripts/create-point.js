@@ -59,6 +59,7 @@ function getCities(event) {
   function handleSelectedItem(event) {
     const itemLi = event.target;
 
+    // Adicionar ou remover a classe com JS
     itemLi.classList.toggle("selected");
 
     const itemId = itemLi.dataset.id;
