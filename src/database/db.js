@@ -53,14 +53,14 @@ db.serialize(() => {
   // db.run(query, values, afterInsertData)
 
   // Consulta os dados da tabela
-  // db.all(`SELECT * FROM places`, function(err, rows){
-  //   if(err) {
-  //     return console.log(err);
-  //   }
+  db.all(`SELECT * FROM places`, function(err, rows){
+    if(err) {
+      return console.log(err);
+    }
 
-  //   console.log("Aqui estao os registros");
-  //   console.log(rows);
-  // })
+    console.log("Aqui estao os registros");
+    console.log(rows);
+  })
 
   // Deletar um dado da tabela
   // db.run(`DELETE FROM places WHERE id = ?`, [3], function(err) {
